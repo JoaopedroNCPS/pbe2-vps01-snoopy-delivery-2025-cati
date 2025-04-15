@@ -1,0 +1,348 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1741699465716
+  modified: 1741699465716
+collection:
+  - name: PetShop
+    meta:
+      id: fld_e5559b7bfe5449738fbb12328d486ab7
+      created: 1742911101631
+      modified: 1742911101631
+      sortKey: -1742911101631
+    children:
+      - name: Motorista
+        meta:
+          id: fld_72592a2328424e3b9bcd1af2a8964869
+          created: 1742911126451
+          modified: 1744740399296
+          sortKey: -1742911129014
+        children:
+          - url: http://localhost:5000/motoristas
+            name: READ
+            meta:
+              id: req_f2ecfd38b77d4039a517646651447f2d
+              created: 1742911134499
+              modified: 1744740706913
+              isPrivate: false
+              sortKey: -1742911144858
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/motoristas
+            name: CREATE
+            meta:
+              id: req_144d32f6e06f4d8da7d350cdce323279
+              created: 1742911138209
+              modified: 1744741783016
+              isPrivate: false
+              sortKey: -1742911144958
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "Livia Teixeira",
+                  "email": "liviiii@snoopy.com"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/motoristas/1
+            name: UPDATE
+            meta:
+              id: req_96a3b2168c9443f9a89c334834939740
+              created: 1742912420111
+              modified: 1744740913832
+              isPrivate: false
+              sortKey: -1742911144845.5
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "nome": "Carlos Albertoo",
+                  "email": "carlos@snoopy.comm"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/motoristas/1
+            name: DELETE
+            meta:
+              id: req_9591cfdf125a4cfcb73f5d7c01fe4367
+              created: 1742920602448
+              modified: 1744740932662
+              isPrivate: false
+              sortKey: -1742911144833
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Pedido
+        meta:
+          id: fld_7461ddce9ae24dcfaaebb83e5b04afe0
+          created: 1742920668573
+          modified: 1742920668573
+          sortKey: -1742911115322.5
+        children:
+          - url: http://localhost:5000/pedidos
+            name: READ
+            meta:
+              id: req_72403ab374494331a2e08cbf2cbe0ba3
+              created: 1742920668575
+              modified: 1742922214350
+              isPrivate: false
+              sortKey: -1742911144858
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/pedidos
+            name: CREATE
+            meta:
+              id: req_7fa2290780f24bbcb76ac20c13490c06
+              created: 1742920668576
+              modified: 1744742050380
+              isPrivate: false
+              sortKey: -1742911144958
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "motoristaId": 5,
+                  "data": "2025-04-15T17:00:00.000Z",
+                  "produto": "Transporte para Vacinação",
+                  "valor": 99.90,
+                  "endereco": "Rua Pet Friendly",
+                  "numero": "700",
+                  "cep": "99999-999",
+                  "complemento": "Em frente ao parque"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/pedidos/1
+            name: UPDATE
+            meta:
+              id: req_66dd11902a874b3b92a865346e9fa8ac
+              created: 1742920668578
+              modified: 1744741505186
+              isPrivate: false
+              sortKey: -1742911144845.5
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |
+                {
+                  "motoristaId": 2,
+                  "data": "2025-04-15T14:00:00.000Z",
+                  "produto": "Transporte para vacinaçãoes"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/pedidos/1
+            name: DELETE
+            meta:
+              id: req_8b34b5d3e8d54b72a9e9254b98221e7d
+              created: 1742920668579
+              modified: 1744741516562
+              isPrivate: false
+              sortKey: -1742911144833
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Telefone
+        meta:
+          id: fld_0431cabdf7194515841f57527c068c32
+          created: 1742920683674
+          modified: 1744740765131
+          sortKey: -1742911108476.75
+        children:
+          - url: http://localhost:5000/telefones
+            name: READ
+            meta:
+              id: req_2e9bff6b6d184f7aa684cfabc613e8be
+              created: 1742920683676
+              modified: 1744740999706
+              isPrivate: false
+              sortKey: -1742911144858
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/telefones
+            name: CREATE
+            meta:
+              id: req_12774f5549a94876989a68c4cbe52d3a
+              created: 1742920683678
+              modified: 1744741850029
+              isPrivate: false
+              sortKey: -1742911144958
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "numero": "(12) 87777776778645635",
+                  "motorista_id": 5
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/telefones/18
+            name: UPDATE
+            meta:
+              id: req_587e36e556de4bf6b23a12b11dc1e836
+              created: 1742920683679
+              modified: 1744741180202
+              isPrivate: false
+              sortKey: -1742911144845.5
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "numero": "(11) 91234-5677"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:5000/telefones/5
+            name: DELETE
+            meta:
+              id: req_287f3bf14fbf49f1afc2ece0dc78a5fa
+              created: 1742920683681
+              modified: 1744741869607
+              isPrivate: false
+              sortKey: -1742911144833
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/10.3.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1741699503766
+    modified: 1741699503766
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1741699503681
+    modified: 1741699503681
+    isPrivate: false
